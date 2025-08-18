@@ -2,11 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 
 
 const images = [
-    'https://placehold.co/800x450?text=1',
-    'https://placehold.co/800x450?text=2',
-    'https://placehold.co/800x450?text=3',
-    'https://placehold.co/800x450?text=4',
-    'https://placehold.co/800x450?text=5',
+    './src/assets/images/about_us/1.jpg',
+    './src/assets/images/about_us/2.jpg',
+    './src/assets/images/about_us/3.jpg',
+    './src/assets/images/about_us/1.jpg',
+    './src/assets/images/about_us/2.jpg',
+    './src/assets/images/about_us/3.jpg',
 ];
 
 export default function AboutSection() {
@@ -87,7 +88,7 @@ export default function AboutSection() {
             <div className="about-content-wrapper">
                 {/* Your left and right content remains the same */}
                 <div className="about-left-column">
-                    <h1 className="about-heading">About Us</h1>
+                    <h1 className="about-heading">About us</h1>
                     <p className="about-description">
                         Plutopal connects fashion designers with content creators, enabling collaboration and helping designers showcase their styles while influencers access engaging original content.
                     </p>
