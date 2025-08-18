@@ -1,5 +1,7 @@
 {
   "name": "plutopal",
+  "homepage": "https://kvrae.github.io/plutopal-website",
+
   "private": true,
   "version": "0.0.0",
   "type": "module",
