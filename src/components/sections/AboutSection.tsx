@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 
 
 const images = [
-    './src/assets/images/about_us/1.jpg',
-    './src/assets/images/about_us/2.jpg',
-    './src/assets/images/about_us/3.jpg',
-    './src/assets/images/about_us/1.jpg',
-    './src/assets/images/about_us/2.jpg',
-    './src/assets/images/about_us/3.jpg',
+    '../src/assets/images/about_us/1.jpg',
+    '../src/assets/images/about_us/2.jpg',
+    '../src/assets/images/about_us/3.jpg',
+    '../src/assets/images/about_us/1.jpg',
+    '../src/assets/images/about_us/2.jpg',
+    '../src/assets/images/about_us/3.jpg',
 ];
 
 export default function AboutSection() {
