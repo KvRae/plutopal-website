@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import img1 from '../assets/images/about_us/1.jpg';
-import img2 from '../assets/images/about_us/2.jpg';
-import img3 from '../assets/images/about_us/3.jpg';
 
-const images = [img1, img2, img3, img1, img2, img3];
+const images = [
+    'https://images.pexels.com/photos/840996/pexels-photo-840996.jpeg',
+    'https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg',
+    'https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg',
+    'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg',
+    'https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg',
+    'https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg',
+];
 
 
 export default function AboutSection() {
