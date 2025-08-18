@@ -1,0 +1,50 @@
+/* index.css — Global styles */
+
+@font-face {
+  font-family: 'Telka';
+  src: url('./assets/fonts/telka/TelkaTRIAL-Regular.otf') format('opentype');
+}
+
+:root {
+  /* Fonts */
+  --font-family-primary: 'Telka', sans-serif;
+
+  /* Font sizes */
+  --font-size-xs: 0.875rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 2rem;
+
+  /* Colors */
+  --color-text: black;
+  --secondary-text-color: white;;
+  --color-accent: #9B73E6;
+  --color-accent-light: #f3edfc;
+  --color-bg-navbar: #ffffff;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 36px;
+  --space-xl: 48px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-primary), sans-serif;
+  color: var(--color-text);
+  background-color: #ffffff; /* Optional */
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}
