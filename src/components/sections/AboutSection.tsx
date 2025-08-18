@@ -9,14 +9,18 @@ const images = [
     'https://placehold.co/800x450?text=5',
 ];
 
-export default function AboutUs() {
-    const carouselRef = useRef(null);
-    const [activeIndex, setActiveIndex] = useState(0);
-    const intervalRef = useRef(null);
+export default function AboutSection() {
+    const carouselRef = useRef<HTMLDivElement | null>(null);
+    const [activeIndex, setActiveIndex] = useState<number>(0);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-    const scrollToIndex = (index) => {
+    const scrollToIndex = (index: number) => {
         const container = carouselRef.current;
-        const item = container?.children[index];
+        if (!container) return;
+
+        const item = container.children[index] as HTMLElement | undefined;
         if (item) {
             item.scrollIntoView({ behavior: 'smooth', inline: 'start' });
             setActiveIndex(index);
@@ -32,7 +36,10 @@ export default function AboutUs() {
         if (!container) return;
 
         const scrollLeft = container.scrollLeft;
-        const childWidth = container.children[0]?.offsetWidth || 1;
+        const child = container.children[0] as HTMLElement | undefined;
+        const childWidth = child?.offsetWidth || 1; // fallback 1 to avoid division by zero
+
+        // 16 is the gap between images in px (adjust if you change CSS)
         const index = Math.round(scrollLeft / (childWidth + 16));
         setActiveIndex(index);
     };
@@ -46,11 +53,10 @@ export default function AboutUs() {
 
     const startAutoScroll = () => {
         if (!intervalRef.current) {
-            intervalRef.current = setInterval(scrollRight, 5000); // every 5 seconds
+            intervalRef.current = setInterval(scrollRight, 5000);
         }
     };
 
-    // Start auto-scroll on load
     useEffect(() => {
         startAutoScroll();
 
@@ -60,9 +66,8 @@ export default function AboutUs() {
 
             const rect = carousel.getBoundingClientRect();
 
-            // Stop if carousel is mostly out of view (above or below screen)
-            const fullyOutside =
-                rect.bottom < 0 || rect.top > window.innerHeight;
+            // If carousel is completely out of viewport (top or bottom), stop auto-scroll
+            const fullyOutside = rect.bottom < 0 || rect.top > window.innerHeight;
 
             if (fullyOutside) {
                 stopAutoScroll();
@@ -70,6 +75,7 @@ export default function AboutUs() {
         };
 
         window.addEventListener('scroll', onPageScroll);
+
         return () => {
             window.removeEventListener('scroll', onPageScroll);
             stopAutoScroll();
