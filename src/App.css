@@ -65,17 +65,13 @@
   font-size: var(--font-size-sm);
 }
 
-.signin-icon {
-  width: 20px;
-  height: 20px;
-  background-color: var(--color-accent);
-  border-radius: 50%;
-}
+
 
 .signin-text {
   font-weight: 600;
   color: var(--color-text);
   transition: color 0.3s ease;
+  padding: 0 var(--space-xs);
 }
 
 .signin-container:hover .signin-text {
@@ -130,6 +126,36 @@
   }
 }
 
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-left: var(--space-sm);
+}
+
+.switcher-flag {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.switcher-divider {
+  width: 1px;
+  height: 22px;
+  background: #767676;
+  border-radius: 2px;
+}
+
+.switcher-text {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.switcher-text.currency {
+  font-size: var(--font-size-md);
+}
+
 /* Hero Section */
 .hero-section {
   background-image: url("./assets/images/8b44827ff532d7e914f707eaf4b33eb5be50a770.jpg");
@@ -173,6 +199,7 @@
 
   .signin-container {
     margin-top: var(--space-sm);
+    padding: var(--space-sm);
   }
 }
 
@@ -319,7 +346,7 @@
   width: 100%;
   height: 100%;
   padding: 32px 0;
-  background: var(--bg-light, #ECEDEF);
+  background: var(#ECEDEF);
   display: flex;
   flex-direction: column;
   gap: 64px;
@@ -343,14 +370,14 @@
 .about-heading {
   font-size: 3.0rem;
   font-weight: bolder;
-  color: var(--text-primary, #1E1E1E);
+  color: var(--color-text, #1E1E1E);
   letter-spacing: 0.4px;
 }
 
 .about-description {
   font-size: 1.2rem;
   font-weight: 400;
-  color: var(--text-secondary, #000);
+  color: var(--color-text, #000);
   letter-spacing: 0.4px;
 }
 
@@ -519,4 +546,152 @@
 
 .dot.active {
   background-color: #6014C8;
+}
+/***************************************************
+***************** Footer***************************
+ */
+
+.footer {
+  background-color: #252525;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.footer-events{
+  display: flex;
+  gap: 0 3.5rem;
+  align-items: start;
+  justify-content: center;
+}
+
+/* Branding Section */
+.footer-brand h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background: #252525; /* placeholder — replace with actual icons */
+}
+
+/* Columns */
+.footer-column h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.footer-column h5 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.footer-column li {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.footer-column li:hover {
+  color: white;
+}
+
+.divider {
+  width: 24px;
+  height: 1px;
+  background: white;
+  margin: 0.5rem 0;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background: black;
+  padding: 1rem 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  font-size: 0.875rem;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  background: white;
+  color: #252525;
+}
+
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+  }
+
+  .footer-links {
+    margin-top: 0;
+  }
 }

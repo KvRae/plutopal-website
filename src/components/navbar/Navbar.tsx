@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Icons
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,12 +8,12 @@ export default function Navbar() {
 
     return (
         <header className="navbar">
-            <div className="navbar-left">
-                <h2 className="logo">
-                    <span>Plutoplal</span> | <span>AIFW</span>
-                </h2>
+            {/* Left Logo */}
+            <div className="logo">
+                <span>Plutopal</span> | <span>AIFW</span>
             </div>
 
+            {/* Links */}
             <nav className={`nav-links ${isOpen ? "open" : ""}`}>
                 <ul>
                     <li><a href="#">Company</a></li>
@@ -22,11 +22,24 @@ export default function Navbar() {
                 </ul>
             </nav>
 
+            {/* Sign In + Lang/Currency */}
             <div className="signin-container">
+                <div className="switcher">
+                    <img
+                        className="switcher-flag"
+                        src="https://placehold.co/22x22"
+                        alt="flag"
+                    />
+                    <div className="switcher-divider" />
+                    <span className="switcher-text">EN</span>
+                    <div className="switcher-divider" />
+                    <span className="switcher-text currency">USD</span>
+                </div>
                 <div className="signin-icon"></div>
                 <span className="signin-text">SIGN IN</span>
             </div>
 
+            {/* Hamburger */}
             <button className="hamburger" onClick={toggleMenu}>
                 {isOpen ? <FaTimes /> : <FaBars />}
             </button>
