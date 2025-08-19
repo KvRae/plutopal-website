@@ -581,10 +581,14 @@
 
 /* Branding Section */
 .footer-brand h3 {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
+.footer-brand h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 .footer-socials {
   display: flex;
   gap: 1rem;
@@ -592,8 +596,8 @@
 }
 
 .social-icon {
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
   border: 1px solid white;
   border-radius: 50%;
   background: #252525; /* placeholder — replace with actual icons */
