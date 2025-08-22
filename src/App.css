@@ -72,6 +72,12 @@
   color: var(--color-text);
   transition: color 0.3s ease;
   padding: 0 var(--space-xs);
+  text-decoration: none;
+}
+
+.signin-container a {
+  text-decoration: none;
+  color: inherit; /* keeps consistent text color */
 }
 
 .signin-text:hover  {
@@ -121,39 +127,13 @@
     display: none;
   }
 
+  .signin-text-link {
+    text-decoration-line: none !important;
+  }
+
   .logo {
     font-size: 1.1rem;
   }
-}
-
-.switcher {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-  margin-left: var(--space-sm);
-}
-
-.switcher-flag {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-}
-
-.switcher-divider {
-  width: 1px;
-  height: 22px;
-  background: #767676;
-  border-radius: 2px;
-}
-
-.switcher-text {
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  color: var(--color-text);
-}
-
-.switcher-text.currency {
-  font-size: var(--font-size-md);
 }
 
 /* Responsive Adjustments */
@@ -185,7 +165,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   padding: 8vw 2vw;
   margin: 0;
   text-align: start;

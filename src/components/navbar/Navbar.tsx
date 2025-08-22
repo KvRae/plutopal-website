@@ -23,19 +23,8 @@ export default function Navbar() {
             </nav>
 
             {/* Sign In + Lang/Currency */}
-            <div className="signin-container ${}" >
-                <div className="switcher">
-                    <img
-                        className="switcher-flag"
-                        src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1235px-Flag_of_the_United_States.svg.png"
-                        alt="flag"
-                    />
-                    <div className="switcher-divider" />
-                    <span className="switcher-text">EN</span>
-                    <div className="switcher-divider" />
-                    <span className="switcher-text">USD</span>
-                </div>
-                <span className="signin-text">SIGN IN</span>
+            <div className="signin-container" >
+                <a className={'signin-text-link'} href={"https://plutopal.ai/signin"} > <span className="signin-text">SIGN IN</span> </a>
             </div>
 
             {/* Hamburger */}
