@@ -1,10 +1,10 @@
 import './App.css'
 import Navbar from "./components/navbar/Navbar.tsx";
-import HeroSection from "./components/sections/HeroSection.tsx";
-import ValuesSection from "./components/sections/ValuesSection.tsx";
-import AboutSection from "./components/sections/AboutSection.tsx";
-import JoinUsSection from "./components/sections/JoinUsSection.tsx";
-import Footer from "./components/Footer.tsx";
+import HeroSection from "./components/sections/hero/HeroSection.tsx";
+import ValuesSection from "./components/sections/values/ValuesSection.tsx";
+import AboutSection from "./components/sections/about/AboutSection.tsx";
+import JoinUsSection from "./components/sections/join_us/JoinUsSection.tsx";
+import Footer from "./components/footer/Footer.tsx";
 
 function App() {
 

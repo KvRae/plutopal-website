@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import "./AboutStyle.css"
 
 const images = [
     'https://images.pexels.com/photos/840996/pexels-photo-840996.jpeg',

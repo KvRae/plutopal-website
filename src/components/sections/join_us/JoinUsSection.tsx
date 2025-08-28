@@ -1,3 +1,5 @@
+import "./JoinUsStyle.css"
+
 export default function JoinUsSection() {
     return (
         <section className="joinus-section">

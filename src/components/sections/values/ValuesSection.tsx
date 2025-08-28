@@ -1,4 +1,5 @@
 import { FaLightbulb, FaLeaf, FaUsers, FaHandshake, FaRocket, FaGlobe, FaBullseye, FaPaintBrush, FaHeart, FaBalanceScale } from 'react-icons/fa';
+import "./ValuesSectionStyle.css"
 
 export default function ValuesSection() {
     const values = [
