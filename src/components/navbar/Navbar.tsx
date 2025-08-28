@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css"
+import { NavLink} from "react-router-dom";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +18,25 @@ export default function Navbar() {
             {/* Links */}
             <nav className={`nav-links ${isOpen ? "open" : ""}`}>
                 <ul>
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Events</a></li>
+                    <li>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) => isActive ? "active" : ""}
+                            end
+                        >Company</NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/careers"
+                            className={({ isActive }) => isActive ? "active" : ""}
+                            end
+                        >Careers</NavLink>
+                    </li>
+                    <li> <NavLink
+                        to="/events"
+                        className={({ isActive }) => isActive ? "active" : ""}
+                        end
+                    >Events</NavLink></li>
                 </ul>
             </nav>
 

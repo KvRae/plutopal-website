@@ -1,24 +1,23 @@
 import './App.css'
-import Navbar from "./components/navbar/Navbar.tsx";
-import HeroSection from "./components/sections/hero/HeroSection.tsx";
-import ValuesSection from "./components/sections/values/ValuesSection.tsx";
-import AboutSection from "./components/sections/about/AboutSection.tsx";
-import JoinUsSection from "./components/sections/join_us/JoinUsSection.tsx";
-import Footer from "./components/footer/Footer.tsx";
-
-function App() {
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Layout from "./components/Layout.tsx";
+import {CompanyPage} from "./pages/company/CompanyPage.tsx";
+import CareersPage from "./pages/careers/CarrersPage.tsx";
+import EventsPage from "./pages/events/EventsPage.tsx";
+import PageNotFound from "./pages/not_found/PageNotFound.tsx";
 
 
+export default function App() {
   return (
-    <>
-        <Navbar />
-        <HeroSection />
-        <ValuesSection />
-        <AboutSection />
-        <JoinUsSection />
-        <Footer/>
-    </>
+    <BrowserRouter basename="plutopal-website">
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<CompanyPage />} />
+                <Route path="careers" element={<CareersPage />} />
+                <Route path="events" element={<EventsPage />} />
+                <Route path="/*" element={<PageNotFound />} />
+            </Route>
+        </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App
